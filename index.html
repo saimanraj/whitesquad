@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Chronicles | White Squad</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <audio id="bgMusic" src="school.mp3" loop preload="auto"></audio>
+
+    <div class="ambient-bg">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <nav class="glass-nav">
+        <div class="logo">Campus<span>Chronicles</span></div>
+        <div class="team-badge">White Squad</div>
+    </nav>
+
+    <header class="hero section" id="home">
+        <div class="hero-content reveal">
+            <h2 class="subtitle">Memories That Last Forever</h2>
+            <h1 class="glitch-title">Campus Chronicles</h1>
+            <p class="description">A journey through friendships, dreams, laughter, and unforgettable college moments.</p>
+            <div class="button-group">
+                <a href="#poster" class="btn btn-glow">Explore Memories</a>
+                <button class="btn btn-outline" id="playAudioBtn">
+                    <span class="icon" id="heroPlayIcon">▶</span> Play Campus Theme
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="poster-section section" id="poster">
+        <div class="container reveal">
+            <h2 class="section-title">Our Campus <span>Story</span></h2>
+            <p class="section-subtitle">A visual representation of our college journey.</p>
+            <div class="poster-wrapper" onclick="openLightbox('campus.png')">
+                <div class="poster-glow"></div>
+                <img src="campus.png" alt="Campus Story AI Poster" class="poster-img">
+                <div class="poster-overlay"><span>🔍 Click to View Fullscreen</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="experience-section section" id="experience">
+        <div class="container">
+            <h2 class="section-title reveal">Campus Life <span>Experience</span></h2>
+            <div class="card-grid">
+                <div class="glass-card reveal stagger">
+                    <div class="card-icon">🌳</div>
+                    <h3>Friends Under Trees</h3>
+                    <p>Where hours felt like minutes and ideas were born.</p>
+                </div>
+                <div class="glass-card reveal stagger">
+                    <div class="card-icon">☕</div>
+                    <h3>Canteen Conversations</h3>
+                    <p>The debates, the laughter, and the shared meals.</p>
+                </div>
+                <div class="glass-card reveal stagger">
+                    <div class="card-icon">💡</div>
+                    <h3>Classroom Adventures</h3>
+                    <p>Inside jokes, brilliant lectures, and sleepy mornings.</p>
+                </div>
+                <div class="glass-card reveal stagger">
+                    <div class="card-icon">📚</div>
+                    <h3>Library Sessions</h3>
+                    <p>Last-minute prep and absolute silence.</p>
+                </div>
+                <div class="glass-card reveal stagger">
+                    <div class="card-icon">🎭</div>
+                    <h3>Cultural Events</h3>
+                    <p>The stage, the lights, and the unforgettable cheers.</p>
+                </div>
+                <div class="glass-card reveal stagger">
+                    <div class="card-icon">🚀</div>
+                    <h3>Dreams & Future Goals</h3>
+                    <p>Planning the next big thing together.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="timeline-section section" id="timeline">
+        <div class="container">
+            <h2 class="section-title reveal">Memory <span>Timeline</span></h2>
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>First Day</h3>
+                        <p>Nervous steps into a whole new world.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>New Friends</h3>
+                        <p>Finding the people who make it feel like home.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Canteen Memories</h3>
+                        <p>Our designated table and endless stories.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Projects & Hackathons</h3>
+                        <p>Sleepless nights, countless bugs, sweet victory.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Graduation Dreams</h3>
+                        <p>Looking ahead, but never forgetting.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="music-section section" id="music">
+        <div class="container reveal">
+            <h2 class="section-title">The Soundtrack of Our <span>Memories</span></h2>
+            <p class="section-subtitle">Play the track to relive the moments.</p>
+            <div class="audio-player glass-card">
+                <div class="visualizer" id="visualizer">
+                    </div>
+                <div class="controls">
+                    <button class="play-btn" id="masterPlay">▶ Play Track</button>
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progress"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-section section" id="gallery">
+        <div class="container">
+            <h2 class="section-title reveal">Campus <span>Gallery</span></h2>
+            <div class="gallery-grid">
+                <div class="gallery-item reveal tree-highlight" onclick="openLightbox('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80')">
+                    <img src="friends.png" alt="Friends Under Trees">
+                    <div class="overlay">Friends Under Trees</div>
+                </div>
+                
+                <div class="gallery-item reveal" onclick="openLightbox('https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=1200&q=80')">
+                    <img src="canteen.png" alt="Canteen Memories">
+                    <div class="overlay">Canteen Memories</div>
+                </div>
+                
+                <div class="gallery-item reveal" onclick="openLightbox('https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1200&q=80')">
+                    <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=600&q=80" alt="Friends">
+                    <div class="overlay">The Squad</div>
+                </div>
+                <div class="gallery-item reveal" onclick="openLightbox('https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1200&q=80')">
+                    <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=600&q=80" alt="Classroom">
+                    <div class="overlay">Classroom</div>
+                </div>
+                <div class="gallery-item reveal" onclick="openLightbox('https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80')">
+                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80" alt="Events">
+                    <div class="overlay">Campus Events</div>
+                </div>
+                <div class="gallery-item reveal" onclick="openLightbox('https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=80')">
+                    <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=600&q=80" alt="Campus Views">
+                    <div class="overlay">Campus Views</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section section" id="stats">
+        <div class="container stat-grid">
+            <div class="stat-item reveal">
+                <h3 class="counter" data-target="1500">0</h3>
+                <p>Friendships Made</p>
+            </div>
+            <div class="stat-item reveal">
+                <h3 class="counter" data-target="120">0</h3>
+                <p>Projects Completed</p>
+            </div>
+            <div class="stat-item reveal">
+                <h3 class="counter" data-target="10000">0</h3>
+                <p>Memories Created</p>
+            </div>
+            <div class="stat-item reveal">
+                <h3 class="counter" data-target="50">0</h3>
+                <p>Campus Events</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="message-section section" id="message">
+        <div class="container reveal">
+            <blockquote class="glass-quote">
+                <span class="quote-mark">"</span>
+                <p>The campus is not just buildings and classrooms.<br>
+                It is where strangers become friends,<br>
+                dreams become goals,<br>
+                and memories become stories.</p>
+            </blockquote>
+        </div>
+    </section>
+
+    <section class="team-section section" id="team">
+        <div class="container">
+            <h2 class="section-title reveal">Meet <span>White Squad</span></h2>
+            <div class="team-grid">
+                <div class="team-card glass-card reveal">
+                    <div class="avatar-placeholder">SR</div>
+                    <h3>SANTHOSH R</h3>
+                    <p>Frontend Developer & Animator</p>
+                    <div class="socials">
+                        <span class="social-icon">in</span>
+                        <span class="social-icon">gh</span>
+                    </div>
+                </div>
+                <div class="team-card glass-card reveal">
+                    <div class="avatar-placeholder">SV</div>
+                    <h3>SAIMANRAJ V</h3>
+                    <p>UI/UX Designer & Developer</p>
+                    <div class="socials">
+                        <span class="social-icon">in</span>
+                        <span class="social-icon">gh</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <h2>Campus Chronicles</h2>
+            <p>Designed with ❤️ by <span>White Squad</span></p>
+            <p class="copyright">&copy; 2026 Campus Chronicles. All rights reserved.</p>
+            <button class="back-to-top" id="backToTop">↑</button>
+        </div>
+    </footer>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close-lightbox">&times;</span>
+        <img id="lightbox-img" src="" alt="Fullscreen Image">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
